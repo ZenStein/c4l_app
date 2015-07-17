@@ -1,0 +1,33 @@
+
+
+
+<div class="table-container">
+	<table st-table="displayedCollection" class="table table-striped" st-safe-src="rowCollection">
+		<thead>
+		<tr>
+			<th grid-tracker your-id="idFactory($index, col)" lr-drag-src="headers" lr-drop-target="headers" ng-repeat="col in columns track by $index" st-sort="{{ col }}" >{{ col }}</th>
+		</tr>
+		<tr>
+			<th colspan="12">
+				<input st-search="" placeholder="global search" class="input-sm form-control" type="search"/>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in displayedCollection ">
+			<td ng-repeat="col in columns track by $index" >{{ row[col] }}</td>
+		</tr>
+		</tbody>
+	 <tfoot >
+	 <tr >
+		<td ng-repeat="col in columns track by $index" grid-tracker=""></td >
+	 </tr >
+	 </tfoot >
+	</table>
+</div>
+<div ng-show="isLoading" class="loading-indicator"></div>
+
+<hr>
+
+<div class="gridStyle" ng-grid="gridOptions">
+</div>

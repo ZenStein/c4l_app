@@ -1,0 +1,31 @@
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    /*width: 400px;*/
+    height: 300px
+}
+.assignmentsGrid {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 200px;
+  }
+.cabin_active_grid{
+    position: relative;
+    float: right;
+    width: 85%;
+    height: auto;
+    border-radius: 5px;
+    display: inline;
+}
+.vert_hk_buttons{
+    position: relative;
+    float: left;
+    display: inline;
+}
+.cs_bk_info_off{
+    background-color: #bed2db;
+}
+.cs_well_success{
+    background-color: #D3EAC9;
+}

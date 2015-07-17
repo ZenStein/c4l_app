@@ -1,0 +1,31 @@
+
+
+/*
+ *   Overview of how the application keeps track of its records.
+ */
+
+ 1. the 'X' factor.  X being the initialization date of: January 1, 2015 0:0:00.
+       Consider X the application epoch. {NOW} references current time.
+
+     a. all things will be in relation to X.
+         NOTE: this will keep back end record logic somewhat in-sync across all apps.
+                  also will allow developers to predict and execute scheduled tasks.
+
+ 2. All 'root' tables will correlate with a model.  root tables will hold any and all events or logs
+      that pertain to it.  tables prefixed with an identifier are partials or versions of the root.
+         the identifier gives a context of time for the data, which will be used for optimization purposes.
+            root to partial relationship is one to many.  
+
+ ALL TABLE NAMES WILL USE NAMING CONVENTION: singular, lowercase, dot notation.
+ 
+ 3. All partial identifiers will start at 'year' and can go as far as 'dayOfYear'.
+       Which would result in a new table being created every day. breakdown tiers:
+          year,quarter[1-4],monthOfYear[1-12],weekOfYear[1-52],dayOfYear[1-365].  Even though all identifiers wil start at tier 'year',
+             not all will go down to dayOfYear.   Model tier depth will depend on necessity. Every root
+                table will have a depth column that specifies the tier depth of the roots partials.
+
+
+
+
+
+

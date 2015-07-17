@@ -1,0 +1,72 @@
+
+<div class="panel panel-primary" >
+    <div class="panel-heading" ><h3>Add a New Cabins4Less Employee </h3></div >
+    <div class="panel-body" >
+        <form name="floating" class="form-vertical" novalidate ng-submit="addEmployee()"
+              ng-model-options="{updateOn:' default blur',debounce:{'default':2000,'blur':0}}">
+
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="First Name" id="inputFirstName" name="firstName"
+                       ng-model="input.first_name" required
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="Last Name"  name="inputLastName"
+                       ng-model="input.last_name" required
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <select class="form-control" ng-model="input.department" placeholder="Department" id="department" name="department"
+                        ng-required
+                        floating-validation >
+                    <option value="HouseKeeping" >HouseKeeping</option >
+                    <option value="Office" >Office</option >
+                    <option value="Maintenance" >Maintenance</option >
+                </select>
+            </div >
+            <div class="form-group" >
+                <input type="date" class="form-control" placeholder="Birthday"  name="inputBirthday"
+                       ng-model="input.birthday" value="2015-12-30" required
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="date" class="form-control" placeholder="Starting Date"  name="inputstartDate"
+                       ng-model="input.start_date" value="2015-09-09" required
+                       floating-validation />
+            </div>
+            <div class="form-group" >
+                <input type="number" class="form-control" placeholder="Hourly Rate"  name="inputhourlyRate"
+                       ng-model="input.hourly_rate" min="0" max="100" step=".25" required
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="SSN" id="slickValidator" name="inputSSN"
+                       ng-model="input.SSN"  slick-validator restrict-numbers="9"
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="phone" id="inputphoneNumber" name="inputphoneNumber"
+                       ng-model="input.phone" required is-valid-phone-number
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="phone" id="inputphoneNumber2" name="inputphoneNumber2"
+                       ng-model="input.phone2" is-valid-phone-number required
+                       floating-validation />
+            </div >
+
+            <div class="form-group" >
+                <input type="email" class="form-control" placeholder="Valid Emaill" id="validEmaill" name="validEmaill"
+                       ng-model="input.email"
+                       floating-validation />
+            </div >
+            <button type="submit" class="btn btn-default" >addEmployee</button >
+        </form>
+    </div >
+</div>

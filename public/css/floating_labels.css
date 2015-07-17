@@ -1,0 +1,231 @@
+/* app css stylesheet */
+
+body {
+		padding-top : 70px;
+		padding-bottom : 70px;
+		}
+
+.menu {
+		background-color: khaki;
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+		padding-left: 10%;
+}
+
+.menu:before {
+
+}
+
+.menu:after {
+
+}
+
+.menu > li {
+  display: inline;
+		margin-right: 10%;
+}
+
+.menu > li:before {
+  content: "|";
+  /*padding-right: 0.3em;*/
+		padding-right : 3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.c-sty-err{
+		color: #990000;
+		}
+
+/*draggable*/
+.st-sort-ascent:before {
+		content : '\25B2';
+		}
+
+.st-sort-descent:before {
+		content : '\25BC';
+		}
+
+.lr-drop-target-before {
+		border-left : 2px solid orange;
+		}
+
+.lr-drop-target-after {
+		border-right : 2px solid orange;
+		}
+/*draggable*/
+
+
+/*ngFloatingLabels*/
+
+.ng-invalid + .float {
+		color : #990000;
+		}
+
+.ng-valid + .float, .ng-valid + .float + label {
+		color : #008800;
+		}
+
+.ng-pending + .float {
+		color : #0044FF;
+		}
+
+.float {
+		/*the parent div must be position:relative */
+		position       : absolute;
+		line-height    : 1;
+		opacity        : 0;
+		color          : #226644;
+		pointer-events : none;
+		top            : 100%;
+		left           : 0;
+		}
+
+.float.top {
+		animation         : .3s bounceInUp;
+		-moz-animation    : .3s bounceInUp;
+		-webkit-animation : .3s bounceInUp;
+		top               : 0;
+		opacity           : 1;
+		}
+
+.float.top-remove {
+		-webkit-transition : all ease-in 0.2s;
+		-moz-transition    : all ease-in 0.2s;
+		transition         : all ease-in 0.2s;
+		top                : 75%;
+		opacity            : 0;
+		}
+
+/*  ===================================================
+    TRANSITION BOUNCE-IN-UP (thanks to animate.css)
+    ===================================================  */
+
+@-webkit-keyframes bounceInUp {
+		0%, 60%, 75%, 90%, 100% { transition-timing-function : cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+
+		0% { transform : translate3d(0, 30px, 0); }
+
+		60% { transform : translate3d(0, -8px, 0); }
+
+		75% { transform : translate3d(0, 5px, 0); }
+
+		90% { transform : translate3d(0, -3px, 0); }
+
+		100% { transform : translate3d(0, 0, 0); }
+		}
+
+@keyframes bounceInUp {
+		0%, 60%, 75%, 90%, 100% { transition-timing-function : cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+
+		0% { transform : translate3d(0, 30px, 0); }
+
+		60% { transform : translate3d(0, -8px, 0); }
+
+		75% { transform : translate3d(0, 5px, 0); }
+
+		90% { transform : translate3d(0, -3px, 0); }
+
+		100% { transform : translate3d(0, 0, 0); }
+		}
+
+@-moz-keyframes bounceInUp {
+		0%, 60%, 75%, 90%, 100% { transition-timing-function : cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+
+		0% { transform : translate3d(0, 30px, 0); }
+
+		60% { transform : translate3d(0, -8px, 0); }
+
+		75% { transform : translate3d(0, 5px, 0); }
+
+		90% { transform : translate3d(0, -3px, 0); }
+
+		100% { transform : translate3d(0, 0, 0); }
+		}
+/*ngFloatingLabels*/
+
+/*floating labesl -------------------------needs to be lcalized later!!!-------------------------*/
+
+
+.panel {
+		max-width : 500px;
+		min-width : 300px;
+		margin    : 100px auto;
+		}
+
+form {
+		padding : 15px 10px;
+		}
+
+.form-control {
+		border                : none;
+		padding               : 0;
+		-webkit-box-shadow    : none !important;
+		-moz-box-shadow       : none !important;
+		box-shadow            : none !important;
+		-webkit-border-radius : 0;
+		-moz-border-radius    : 0;
+		border-radius         : 0;
+		}
+
+.form-control.ng-invalid,
+.ng-submitted .form-control.ng-invalid {
+		border-bottom : 1px solid #990000;
+		}
+
+.form-control.ng-valid {
+		border-bottom : 1px solid #226644;
+		}
+
+.form-control.ng-pristine {
+		border-bottom : 1px solid #000000;
+		}
+
+.form-control.ng-pending {
+		border-bottom : 1px solid #0044FF;
+		}
+
+form .form-group {
+		position    : relative;
+		padding-top : 15px;
+		}
+
+.form-control::-webkit-input-placeholder {
+		color : #333333;
+		}
+
+.form-control:-moz-placeholder {
+		color : #333333;
+		}
+
+.form-control::-moz-placeholder {
+		color : #333333;
+		}
+
+.form-control:-ms-input-placeholder {
+		color : #333333;
+		}
+
+.form-group input[type="checkbox"] {
+		margin         : 0 -20px 0 10px;
+		vertical-align : middle;
+		}
+
+.form-group.spinner i {
+		position : absolute;
+		top      : 0;
+		right    : 0;
+		}
+
+@media only screen and (max-device-width : 640px) {
+		.panel {
+				margin : auto;
+				}
+		}
+
+/*floating labesl -------------------------needs to be lcalized later!!!-------------------------*/
